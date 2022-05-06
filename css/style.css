@@ -1,0 +1,230 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  /* background-color: blueviolet; */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 最上方 */
+#containertop {
+  width: 100%;
+  height: 55px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#containertopleft {
+  width: 12%;
+  height: 55px;
+  position: relative;
+  display: inline-block;
+}
+#containertopleft button {
+  position: absolute;
+  top: 50%;
+  left: 16%;
+  transform: translate(-10%, -50%);
+  font-size: 20px;
+  border: none;
+  background:none;
+  cursor: pointer;
+}
+#containertopleft a {
+  position: absolute;
+  top: -1px;
+  left: 75px;
+}
+
+/* 上方搜尋欄 */
+#containertopcenter {
+  height: 55px;
+  width: 76%;
+  position: absolute;
+  top: 0;
+  left: 12%;
+  text-align: center;
+  border-bottom: 1px solid gray ; 
+  background-color: rgba(255, 255, 255, 0.5);
+  /* display: block; */
+}
+#containertopcenter .inputtext {
+  line-height: 34px;  /* 總高38px 34+2+2 */
+  margin-top: 8px;
+  padding: 0;
+  font-size: 1rem;
+  z-index: 2;
+}
+#containertopcenter .searchbtn {
+  width: 58px;
+  height: 38px;
+  vertical-align: middle;
+  position: relative;
+  left: -4px;
+  top:-1px;
+  font-size: 16px;
+}
+#containertopcenter .recordbtn {
+  width: 38px;
+  height: 38px;
+  vertical-align: middle;
+  position: relative;
+  left: -4px;
+  top:-1px;
+  border-radius: 50%;
+  border: none;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+
+/* 上方右側登入 */
+#containertopright {
+  height: 55px;
+  width: 12%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(22, 209, 147);
+  font-size: 25px;
+  line-height: 2.5;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+/* 中間那排 */
+#containerright {
+  width: 88%;
+  height: calc(100% - 55px);
+  /* background-color: rgb(136, 202, 202); */
+  float: right;
+  position: relative;
+  top: 55px;
+}
+#containerright span{
+  width: calc(100%-45px);
+  height: 100%;
+  margin-left: 5px;
+  position: absolute;
+}
+
+
+
+/* 左側選單 */
+#containerleft {
+  width: 12%;
+  height: calc(100% - 55px);
+  /* background-color: rgb(219, 31, 31); */
+  float: left;
+  position: fixed;
+  top: 55px;
+  font-size: 15px;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  /* background: black; */
+  position: relative;
+  overflow: auto;
+}
+
+.menu table {
+  width: 100%;
+  border-bottom: 2px solid lightgray;
+}
+
+.menu .different {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#containerleft tr {
+  display: block;
+  width: 200%;
+}
+
+#containerleft tr:hover:not(.different) {
+  background-color: lightgray;
+}
+
+#containerleft td:nth-child(1) {
+  padding: 10px 25px;
+  font-size: 20px;
+  color: black;
+  /* background-color: aqua; */
+}
+
+#containerleft table td:nth-child(2) {
+  padding: 10px 5px;
+  vertical-align: text-top;
+  width: 100%;
+  color: black;
+  /* background-color: bisque; */
+}
+
+.logintd {
+  position: relative;
+
+  /* background-color: bisque; */
+}
+
+.login {
+  width: 100px;
+  height: 45px;
+  font-size: 14px;
+  color: rgb(71, 137, 163);
+  background-color: transparent;
+  text-align: right;
+  padding: 0px 20px;
+  border: 2px solid rgb(71, 137, 163);
+  /* display: block; */
+  cursor: pointer;
+}
+
+.logintd .fa-circle-user {
+  color: rgb(71, 137, 163);
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  /* display: block; */
+}
+
+
+
+#containermiddle {
+  width: 100%;
+  height: 55px;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  border-top: 1px solid gray;
+  position: fixed;
+}
+
+#containermiddle input {
+  background-color: rgb(238, 238, 238);
+  border-radius: 15px;
+  border: 1px solid gray;
+  font-size: 14px;
+  margin: 5px;
+  position: relative;
+  left: 20%;
+  margin-top: 13px;
+  padding: 5px 10px;
+}
+
+#containermiddle input:hover {
+  background-color: black;
+  color: white;
+}
+
+#containercontain {
+  width: 100%;
+  height: calc(100% - 55px);
+  background-color: rgb(90, 66, 20);
+  position: relative;
+  left: 0;
+  top: 55px;
+}
