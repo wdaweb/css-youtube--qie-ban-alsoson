@@ -101,29 +101,11 @@ body {
   display: inline-block;
 }
 
-/* 中間那排 */
-#containerright {
-  width: 88%;
-  height: calc(100% - 55px);
-  float: right;
-  position: relative;
-  top: 55px;
-}
-#containerright span{
-  width: calc(100%-45px);
-  /* height: 100%; */
-  margin-left: 5px;
-  position: absolute;
-}
-#containermiddle{
-  background-color: rgba(255, 255, 255, 0.97);
-  border-bottom: 1px solid gray ;
-}
 
 
 /* 左側選單 */
 #containerleft {
-  width: 12%;
+  width: 12.5%;
   height: calc(100% - 55px);
   /* background-color: rgb(219, 31, 31); */
   float: left;
@@ -174,7 +156,7 @@ body {
 /* 登入的 */
 .logintd {
   position: relative;
-
+  
 }
 
 .login {
@@ -196,6 +178,25 @@ body {
   left: 30%;
 }
 
+
+/* 中間那排 */
+#containerright {
+  width: 88.5%;
+  height: calc(100% - 55px);
+  float: right;
+  position: relative;
+  top: 55px;
+}
+#containerright span{
+  width: calc(100%-45px);
+  /* height: 100%; */
+  margin-left: 5px;
+  position: absolute;
+}
+#containermiddle{
+  background-color: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid gray ;
+}
 
 /* 右側中間按鈕 */
 #containermiddle {
@@ -224,6 +225,7 @@ body {
 }
 
 /* 內容 */
+
 #containercontain {
   width: 100%;
   position: relative;
@@ -231,17 +233,20 @@ body {
   top: 55px;
   z-index: -2;  
 }
-
 #containercontain table{
-  width: 98%;
+  width: 90%;
   border-collapse: collapse;
-  margin-left: 1%;
+  margin-left:5%;
+  
 }
 #containercontain td{
   width: 25%;
 }
 #containercontain .card{
   margin:0px 5px ;
+  width: 95%;
+  text-align: center;
+
 }
 #containercontain .row{
   width: 100%;
