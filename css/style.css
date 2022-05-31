@@ -3,10 +3,27 @@ body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  /* background-color: blueviolet; */
   margin: 0;
   padding: 0;
   list-style: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* //捲軸底色 */
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* //捲軸寬度 */
+html::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+/* //捲軸本體顏色 */
+html::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 10px;
 }
 
 /* 最上方 */
@@ -18,6 +35,7 @@ body {
   right: 0;
   background-color: rgba(255, 255, 255, 0.5);
 }
+
 /* logo */
 #containertopleft {
   width: 12%;
@@ -25,20 +43,37 @@ body {
   position: relative;
   display: inline-block;
 }
+
 #containertopleft button {
   position: absolute;
   top: 50%;
-  left: 16%;
-  transform: translate(-10%, -50%);
+  left: 9%;
+  transform: translate(-9%, -50%);
   font-size: 20px;
   border: none;
-  background:none;
+  background: none;
   cursor: pointer;
 }
+
 #containertopleft a {
+  width: 100%;
   position: absolute;
-  top: -1px;
-  left: 75px;
+  top: 45%;
+  left: 25%;
+  transform: translate(-0%, -50%);
+}
+
+#containertopleft i {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#containertopleft h1 {
+  display: inline-block;
+}
+
+#containertopleft h3 {
+  display: inline-block;
 }
 
 /* 上方搜尋欄 */
@@ -49,33 +84,37 @@ body {
   top: 0;
   left: 12%;
   text-align: center;
-  border-bottom: 1px solid gray ; 
-  background-color: rgba(255, 255, 255, 0.97);
-  /* display: block; */
+  background: rgba(255, 255, 255, 0.97);
 }
+
 #containertopcenter .inputtext {
-  line-height: 34px;  /* 總高38px 34+2+2 */
+  line-height: 31px;
+  /* 總高38px 34+2+2 */
   margin-top: 8px;
   padding: 0;
   font-size: 1rem;
   z-index: 2;
+  border: 1px solid lightgray;
 }
+
 #containertopcenter .searchbtn {
   width: 58px;
   height: 38px;
   vertical-align: middle;
   position: relative;
   left: -4px;
-  top:-1px;
+  top: -1px;
   font-size: 16px;
+  border: 1px solid lightgray;
 }
+
 #containertopcenter .recordbtn {
   width: 38px;
   height: 38px;
   vertical-align: middle;
   position: relative;
   left: -4px;
-  top:-1px;
+  top: -1px;
   border-radius: 50%;
   border: none;
   margin-left: 5px;
@@ -94,41 +133,64 @@ body {
   line-height: 2.5;
   background-color: rgba(255, 255, 255, 0.97);
 }
-#containertopright div{
+
+#containertopright div {
   height: 100%;
-  width: 30px;
+  width: 28px;
   position: relative;
   display: inline-block;
+  margin-right: 10px;
 }
-
 
 
 /* 左側選單 */
 #containerleft {
   width: 12.5%;
   height: calc(100% - 55px);
-  /* background-color: rgb(219, 31, 31); */
   float: left;
   position: fixed;
   top: 55px;
   font-size: 15px;
+  order: 1;
 }
 
 .menu {
   width: 100%;
   height: 100%;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
+}
+
+.menu:hover {
+  overflow-y: scroll;
+}
+
+/* //捲軸底色 */
+.menu::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* //捲軸寬度 */
+.menu::-webkit-scrollbar {
+  width: 10px;
+  height: 60px;
+}
+
+/* //捲軸本體顏色 */
+.menu::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 10px;
+  order: 1;
 }
 
 .menu table {
   width: 100%;
   border-bottom: 2px solid lightgray;
+  cursor: pointer;
 }
 
 .menu .different {
-  font-size: 14px;
-  cursor:auto;
+  cursor: auto;
 }
 
 #containerleft tr {
@@ -142,6 +204,10 @@ body {
 
 #containerleft td:nth-child(1) {
   padding: 10px 25px;
+  color: gray;
+}
+
+#containerleft td i {
   font-size: 20px;
   color: black;
 }
@@ -156,7 +222,7 @@ body {
 /* 登入的 */
 .logintd {
   position: relative;
-  
+
 }
 
 .login {
@@ -187,30 +253,29 @@ body {
   position: relative;
   top: 55px;
 }
-#containerright span{
+
+#containerright span {
   width: calc(100%-45px);
-  /* height: 100%; */
   margin-left: 5px;
   position: absolute;
 }
-#containermiddle{
-  background-color: rgba(255, 255, 255, 0.97);
-  border-bottom: 1px solid gray ;
+
+#containermiddle {
+  background: linear-gradient(to right, transparent 0px, transparent 20px, rgba(255, 255, 255, 0.97) 5px, rgba(255, 255, 255, 0.97) 100%);
+
 }
 
 /* 右側中間按鈕 */
 #containermiddle {
   width: 100%;
   height: 55px;
-  /* background-color: rgba(255, 255, 255, 0.5); */
-  border-top: 1px solid gray;
   position: fixed;
 }
 
 #containermiddle input {
   background-color: rgb(238, 238, 238);
   border-radius: 15px;
-  border: 1px solid gray;
+  border: 1px solid lightgray;
   font-size: 14px;
   margin: 5px;
   position: relative;
@@ -231,48 +296,58 @@ body {
   position: relative;
   left: 0;
   top: 55px;
-  z-index: -2;  
+  z-index: -2;
+  background:
+    linear-gradient(to right, white 0%, white 19px, transparent 19px, transparent 100%),
+    rgb(250, 250, 250);
 }
-#containercontain table{
+
+
+#containercontain table {
   width: 90%;
   border-collapse: collapse;
-  margin-left:5%;
-  
+  margin-left: 6%;
+  overflow-y: scroll;
 }
-#containercontain td{
+
+#containercontain td {
   width: 25%;
 }
-#containercontain .card{
-  margin:0px 5px ;
+
+#containercontain .card {
+  margin: 0px 5px;
   width: 95%;
   text-align: center;
-
 }
-#containercontain .row{
+
+#containercontain .row {
   width: 100%;
   border-collapse: collapse;
   text-align: center;
   color: black;
   font-size: 14px;
   overflow: hidden;
-  
 }
-#containercontain .row:first-child{
+
+#containercontain .row:first-child {
   margin-top: 10px;
 }
-#containercontain .row:last-child{
+
+#containercontain .row:last-child {
   font-size: 12px;
   color: gray;
 }
 
-#containercontain .bigimg{
+#containercontain .bigimg {
   width: 100%;
   margin-top: 10px;
 }
-#containercontain img{
+
+#containercontain img {
   width: 100%;
 }
-#containercontain .row .col:first-child{
+
+#containercontain .row .col:first-child {
   width: 40px;
   height: 40px;
   display: inline-block;
@@ -280,7 +355,8 @@ body {
   border-radius: 50%;
   overflow: hidden;
 }
-#containercontain .row .col:last-child{
+
+#containercontain .row .col:last-child {
   width: calc(90% - 40px);
   height: 35px;
   display: inline-block;
@@ -288,22 +364,24 @@ body {
   vertical-align: middle;
   text-align: left;
   padding: 5px 8px;
+
 }
-#containercontain .row:last-child .col:first-child{
+
+#containercontain .row:last-child .col:first-child {
   height: 0px;
 }
-#containercontain .row h2{
+
+#containercontain .row h2 {
   color: black;
   font-weight: 400;
   text-align: left;
   padding-left: 10px;
   margin-bottom: 0px;
 }
-#containercontain hr{
-  color: lightgray;
-  width: calc(97% - 4px) ; 
+
+#containercontain hr {
+  background: lightgray;
+  width: calc(97% - 4px);
   border: 2px solid lightgray;
   border-radius: 1px;
 }
-
-
